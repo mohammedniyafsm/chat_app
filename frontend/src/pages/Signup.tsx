@@ -102,7 +102,7 @@ export const Signup = () => {
             Don't have an account?{" "}
             <span
               className="underline cursor-pointer"
-              onClick={() => navigate("/signup")}
+              onClick={() => navigate("/signin")}
             >
               Signup
             </span>
