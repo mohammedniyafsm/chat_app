@@ -32,6 +32,10 @@ app.get('/',(req,res)=>{
 io.on('connection', (socket)=>{
   console.log("user Connected",socket.id);
 
+   socket.on("error", (err) => {
+    console.error(" Socket error:", err);
+  });
+
   socket.on('join',(roomId : string)=>{
     console.log(`User joined Room : ${roomId}`);
     socket.join(roomId);
