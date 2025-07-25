@@ -37,7 +37,7 @@ io.on('connection', (socket)=>{
   });
 
   socket.on('join',(roomId : string)=>{
-    console.log(`User joined Room : ${roomId}`);
+    console.log(`User  joined Room : ${roomId}`);
     socket.join(roomId);
   })
 
