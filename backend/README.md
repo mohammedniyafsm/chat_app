@@ -1,41 +1,47 @@
-💬 Real-Time Chat App - Backend
-This is the backend of a Real-Time Chat Application built with Node.js, Express, MongoDB, and Socket.IO. It handles real-time messaging, user authentication, and message persistence, supporting private chat rooms.
-🚀 Features
+# 💬 Real-Time Chat App - Backend
 
- WebSocket server for real-time messaging
- Store and retrieve messages in MongoDB
- User authentication with JWT
- Broadcast messages to room members
+This is the **backend** of a Real-Time Chat Application built with **Node.js**, **Express**, **MongoDB**, and **Socket.io**. It provides API routes for user authentication and message handling and sets up a WebSocket server for real-time messaging.
 
-🛠️ Tech Stack
+---
 
-Node.js
-Express
-MongoDB
-Socket.IO
+## 🛠️ Tech Stack
 
-📦 Installation
+- Node.js
+- Express
+- MongoDB + Mongoose
+- Socket.io
+- JSON Web Tokens (JWT)
+- dotenv
+- cors
 
-Clone the Repository:
-git clone https://github.com/mohammedniyafsm/chat-backend.git
+---
+## 🚀 Getting Started
+
+### Cloning the Repository
+
+To clone the repository locally, use the following commands:
+
+```bash
+git clone https://github.com/mohammedniyafsm/chat_app
 cd backend
+```
 
-
-Install Dependencies:
+### Installation
+```bash
 npm install
-
-
-Configure Environment Variables:
-
-Create a .env file in the root directory with:MONGO_DB_URL=
-PORT=3001
-JWT_SECRET=<your-secret-key>
+```
+### Configuration
+Create a `.env` file in the root folder of your project. Update it following the convention of the `.env.example` file. 
+Here's an example:
+```
+MONGODB_URL=
+PORT=
+JWT_SECRET_KEY=
 FRONTEND_URL=
+```
 
-
-
-
-
-Run the Application:
-npm start
+### Running the Project
+```bash
+npm run dev
+```
 
