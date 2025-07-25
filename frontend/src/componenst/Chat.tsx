@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { InputWithLabel } from './ui/LabelInput'
 import { Button } from './ui/Button'
 import { Message } from './ui/Message'
-import { useGetmessage, useUserDetail } from '../hooks/user';
+import { useGetmessage, useSendMessage, useUserDetail } from '../hooks/user';
 import  socket from '../utils/socket'
 import { getRoomId } from '../utils/roomId';
 import { useAuth } from '../hooks/useAuth';
@@ -18,7 +18,7 @@ function Chat({ query, username }: ChatProps) {
   const [ currentMessage,setCurrentMessage ] = useState("");
   const { data : messages ,isLoading  } =useGetmessage(token,query)
   const { data : userDetail  } = useUserDetail(token);
-  // const { mutate : ForwardMessage } = useSendMessage()
+  const { mutate : ForwardMessage } = useSendMessage()
   const [socketMessages, setSocketMessages] = useState<any[]>([]);
 
 
@@ -70,17 +70,17 @@ function Chat({ query, username }: ChatProps) {
     _id: Date.now().toString(),
   });
   
-    // ForwardMessage(
-    //   { receiverId :query ,token , message :currentMessage},
-    //   {
-    //     onSuccess : ()=>{
-    //       setCurrentMessage("");
-    //     },
-    //       onError: (error) => {
-    //       console.error("Send failed:", error);
-    //     }
-    //   }
-    // )
+    ForwardMessage(
+      { receiverId :query ,token , message :currentMessage},
+      {
+        onSuccess : ()=>{
+          setCurrentMessage("");
+        },
+          onError: (error) => {
+          console.error("Send failed:", error);
+        }
+      }
+    )
   }
 
   return (
