@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useSignin } from "../hooks/user";
 import { toast } from "react-hot-toast";
 import type { AxiosError } from "axios";
-import { useAuth } from "../context/store";
+import { useAuth } from "../hooks/useAuth";
 
 
 const signinSchema = z.object({

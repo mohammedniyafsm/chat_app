@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../componenst/Sidebar";
 import Chat from "../componenst/Chat";
-import { useAuth } from "../context/store";
+
 import { useEffect, useState } from "react";
+import { useAuth } from "../hooks/useAuth";
 
 
 export const Home = () => {

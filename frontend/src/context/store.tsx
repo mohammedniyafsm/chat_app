@@ -1,13 +1,6 @@
-import { createContext, useContext, useState, ReactNode } from "react";
-
-interface AuthContextType {
-  token: string;
-  isLoggedIn: boolean;
-  storeTokenInLS: (token: string) => void;
-  LogoutUser: () => void;
-}
-
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+// src/context/AuthProvider.tsx
+import { useState, type ReactNode } from "react";
+import { AuthContext } from "./auth-context";
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -33,13 +26,4 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       {children}
     </AuthContext.Provider>
   );
-};
-
-// Custom hook with type guard
-export const useAuth = (): AuthContextType => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
-  return context;
 };

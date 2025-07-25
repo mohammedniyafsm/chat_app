@@ -3,9 +3,9 @@ import { InputWithLabel } from './ui/LabelInput'
 import { Button } from './ui/Button'
 import { Message } from './ui/Message'
 import { useGetmessage, useSendMessage, useUserDetail } from '../hooks/user';
-import { useAuth } from '../context/store';
 import  socket from '../utils/socket'
 import { getRoomId } from '../utils/roomId';
+import { useAuth } from '../hooks/useAuth';
 
 type ChatProps = {
   query: string;

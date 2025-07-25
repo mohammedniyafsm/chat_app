@@ -1,7 +1,7 @@
 import { GrAction } from "react-icons/gr";
 import { InputWithLabel } from "./ui/LabelInput";
 import { useGetAllUsers } from "../hooks/user";
-import { useAuth } from "../context/store";
+import { useAuth } from "../hooks/useAuth";
 import { useState } from "react";
 
 type SidebarProps = {
