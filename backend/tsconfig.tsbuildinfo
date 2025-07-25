@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/config/db.ts","./src/controller/messagecontroller.ts","./src/controller/usercontroller.ts","./src/middleware/auth.ts","./src/model/user.ts","./src/model/message.ts","./src/routes/user.ts","./src/types/index.d.ts","./src/utils/chat.ts","./src/utils/jwt.ts"],"version":"5.8.3"}
