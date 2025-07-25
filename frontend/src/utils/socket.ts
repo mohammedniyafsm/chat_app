@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const socket = io(import.meta.env.VITE_API_BASE_URL, {
+const socket = io("wss://chat-app-17eu.onrender.com", {
   withCredentials: true,
   transports: ['websocket'],
 });

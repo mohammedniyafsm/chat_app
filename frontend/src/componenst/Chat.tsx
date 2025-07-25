@@ -26,6 +26,15 @@ function Chat({ query, username }: ChatProps) {
   const roomId = getRoomId(senderId,query);
 
   useEffect(()=>{
+    
+    socket.on("connect", () => {
+     console.log(" Connected to server:", socket.id);
+     });
+
+    socket.on("connect_error", (err) => {
+     console.log(" Connection Error:", err.message);
+    });
+
     socket.emit('join',roomId);
     console.log("User Joined Room",roomId);
     
