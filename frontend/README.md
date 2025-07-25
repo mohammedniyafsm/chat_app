@@ -1,38 +1,41 @@
+# 💬 Real-Time Chat App - Frontend
 
-💬 Real-Time Chat App - Frontend
-This is the frontend of a Real-Time Chat Application built with React and Socket.io-client. It allows users to log in, select chat rooms, and exchange messages in real-time, with support for viewing message history.
-🚀 Features
+This is the **frontend** of a Real-Time Chat Application built with **React** and **Socket.io-client**. It allows users to log in and exchange messages in real-time, with support for chat rooms and message history.
 
- Real-time messaging using WebSockets
- Display previous messages upon joining a chat room
- Username-based authentication (signup/signin)
- Room-based private chats with user selection
+---
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-React
-Socket.io-client
-Axios
-Tailwind CSS (for styling)
+- React
+- Socket.io-client
+- Axios
+- Tailwind CSS (optional)
 
-📦 Installation
+---
+## 🚀 Getting Started
 
-Clone the Repository:
-git clone https://github.com/mohammedniyafsm/chat-frontend.git
+### Cloning the Repository
+
+To clone the repository locally, use the following commands:
+
+```bash
+git clone https://github.com/mohammedniyafsm/chat_app
 cd frontend
+```
 
-
-Install Dependencies:
+### Installation
+```bash
 npm install
+```
+### Configuration
+Create a `.env` file in the root folder of your project. Update it following the convention of the `.env.example` file. 
+Here's an example:
+```
+VITE_API_BASE_URL=
+```
 
-
-Configure Environment Variables:
-
-Create a .env file in the root directory with:VITE_BACKEND_URL="https://chat-app-17eu.onrender.com"
-
-
-
-Run the Development Server:
+### Running the Project
+```bash
 npm run dev
-
+```
 
