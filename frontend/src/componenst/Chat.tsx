@@ -70,17 +70,17 @@ function Chat({ query, username }: ChatProps) {
     _id: Date.now().toString(),
   });
   
-    ForwardMessage(
-      { receiverId :query ,token , message :currentMessage},
-      {
-        onSuccess : ()=>{
-          setCurrentMessage("");
-        },
-          onError: (error) => {
-          console.error("Send failed:", error);
-        }
-      }
-    )
+    // ForwardMessage(
+    //   { receiverId :query ,token , message :currentMessage},
+    //   {
+    //     onSuccess : ()=>{
+    //       setCurrentMessage("");
+    //     },
+    //       onError: (error) => {
+    //       console.error("Send failed:", error);
+    //     }
+    //   }
+    // )
   }
 
   return (
