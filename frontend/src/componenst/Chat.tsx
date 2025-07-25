@@ -27,6 +27,8 @@ function Chat({ query, username }: ChatProps) {
 
   useEffect(()=>{
     socket.emit('join',roomId);
+    console.log("User Joined Room",roomId);
+    
   },[roomId])
 
 
@@ -49,15 +51,15 @@ function Chat({ query, username }: ChatProps) {
   const handleSubmit = ()=>{
     if(!currentMessage.trim()) return;
 
-    const messageData = {
-      roomId,
-      message : currentMessage,
-      senderId,
-      receiverId :query
-    }
 
-    socket.emit('send_message',messageData)
-
+  socket.emit("send_message", {
+    roomId,  
+    message :currentMessage,
+    senderId,
+    receiverId: query,
+    _id: Date.now().toString(),
+  });
+  
     ForwardMessage(
       { receiverId :query ,token , message :currentMessage},
       {

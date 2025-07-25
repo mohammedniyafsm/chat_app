@@ -8,11 +8,11 @@ import cors from "cors"
 
 const app = express();
 const server = createServer(app);
-const BackendUrl=process.env.BACKEND_URL
+const frontendUrl=process.env.FRONTEND_URL
 
 const io = new Server(server,{
   cors : {
-    origin : BackendUrl,
+    origin : frontendUrl,
     methods : ['GET','POST'],
     credentials : true,
   }
