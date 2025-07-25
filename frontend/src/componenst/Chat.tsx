@@ -43,6 +43,7 @@ function Chat({ query, username }: ChatProps) {
 
   useEffect(() => {
   socket.on("receive_message", (data) => {
+    console.log("Recieved data",data);
     setSocketMessages((prev) => [...prev, data]);
   });
 
